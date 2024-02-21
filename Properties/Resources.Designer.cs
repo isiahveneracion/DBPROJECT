@@ -63,9 +63,39 @@ namespace DBPROJECT.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap camera_icon_39 {
+            get {
+                object obj = ResourceManager.GetObject("camera-icon-39", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap camera_icon_391 {
+            get {
+                object obj = ResourceManager.GetObject("camera-icon-391", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap forgot_password_icon_18359___10x10 {
             get {
                 object obj = ResourceManager.GetObject("forgot-password-icon-18359 - 10x10", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap group_png_3236 {
+            get {
+                object obj = ResourceManager.GetObject("group-png-3236", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

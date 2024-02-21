@@ -41,6 +41,7 @@ namespace DBPROJECT
             this.menuMain = new System.Windows.Forms.MenuStrip();
             this.systemToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.changePasswordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.editUserProfileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tsTop.SuspendLayout();
             this.tsBottom.SuspendLayout();
             this.menuMain.SuspendLayout();
@@ -135,7 +136,8 @@ namespace DBPROJECT
             // systemToolStripMenuItem
             // 
             this.systemToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.changePasswordToolStripMenuItem});
+            this.changePasswordToolStripMenuItem,
+            this.editUserProfileToolStripMenuItem});
             this.systemToolStripMenuItem.Name = "systemToolStripMenuItem";
             this.systemToolStripMenuItem.Size = new System.Drawing.Size(57, 20);
             this.systemToolStripMenuItem.Text = "System";
@@ -147,6 +149,14 @@ namespace DBPROJECT
             this.changePasswordToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.changePasswordToolStripMenuItem.Text = "change password";
             this.changePasswordToolStripMenuItem.Click += new System.EventHandler(this.changePasswordToolStripMenuItem_Click);
+            // 
+            // editUserProfileToolStripMenuItem
+            // 
+            this.editUserProfileToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("editUserProfileToolStripMenuItem.Image")));
+            this.editUserProfileToolStripMenuItem.Name = "editUserProfileToolStripMenuItem";
+            this.editUserProfileToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.editUserProfileToolStripMenuItem.Text = "edit user profile";
+            this.editUserProfileToolStripMenuItem.Click += new System.EventHandler(this.editUserProfileToolStripMenuItem_Click);
             // 
             // frmMain
             // 
@@ -188,6 +198,7 @@ namespace DBPROJECT
         private System.Windows.Forms.MenuStrip menuMain;
         private System.Windows.Forms.ToolStripMenuItem systemToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem changePasswordToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem editUserProfileToolStripMenuItem;
     }
 }
 

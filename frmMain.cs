@@ -71,5 +71,50 @@ namespace DBPROJECT
 
             ChangePasswordfrm.ShowDialog();
         }
+
+
+
+        
+        private frmUserProfile UserProfilefrm;
+
+        
+
+        private void editUserProfileToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            UserProfilefrm = new frmUserProfile(Globals.gIdUser, Globals.gLoginName);
+            UserProfilefrm.FormClosed += UserProfilefrm_FormClosed;
+            UserProfilefrm.ShowDialog();
+        }
+
+        private void UserProfilefrm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+
+            UserProfilefrm.Dispose();
+        }
+        /*
+        private void UserProfilefrm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            UserProfilefrm = null;
+            
+            this.txtUserName.Text = Globals.gLoginName;
+        }
+
+        private void editUserProfileToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (UserProfilefrm == null)
+            {
+                UserProfilefrm = new frmUserProfile();
+                //UserProfilefrm.MdiParent = this;
+
+                UserProfilefrm.FormClosed += UserProfilefrm_FormClosed;
+
+                UserProfilefrm.Show();
+            }
+            else UserProfilefrm.Activate();
+
+            this.txtUserName.Text = Globals.gLoginName;
+
+        }
+        */
     }
 }
