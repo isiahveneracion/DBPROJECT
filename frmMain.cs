@@ -72,12 +72,7 @@ namespace DBPROJECT
             ChangePasswordfrm.ShowDialog();
         }
 
-
-
-        
         private frmUserProfile UserProfilefrm;
-
-        
 
         private void editUserProfileToolStripMenuItem_Click(object sender, EventArgs e)
         {

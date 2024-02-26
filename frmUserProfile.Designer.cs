@@ -30,34 +30,34 @@ namespace DBPROJECT
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmUserProfile));
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtLoginName = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtEmail = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtSMTPHOST = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtSMTPport = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.pkrBirthdate = new System.Windows.Forms.DateTimePicker();
+            this.cbxGender = new System.Windows.Forms.ComboBox();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnClear = new System.Windows.Forms.Button();
+            this.picBoxUser = new System.Windows.Forms.PictureBox();
+            this.btnLoadPhoto = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBoxUser)).BeginInit();
             this.SuspendLayout();
             // 
-            // textBox1
+            // txtLoginName
             // 
-            this.textBox1.Location = new System.Drawing.Point(90, 329);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(211, 20);
-            this.textBox1.TabIndex = 0;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.txtLoginName.Location = new System.Drawing.Point(90, 329);
+            this.txtLoginName.Name = "txtLoginName";
+            this.txtLoginName.Size = new System.Drawing.Size(211, 20);
+            this.txtLoginName.TabIndex = 0;
+            this.txtLoginName.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label1
             // 
@@ -78,12 +78,12 @@ namespace DBPROJECT
             this.label2.TabIndex = 3;
             this.label2.Text = "Email";
             // 
-            // textBox2
+            // txtEmail
             // 
-            this.textBox2.Location = new System.Drawing.Point(90, 355);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(211, 20);
-            this.textBox2.TabIndex = 2;
+            this.txtEmail.Location = new System.Drawing.Point(90, 355);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(211, 20);
+            this.txtEmail.TabIndex = 2;
             // 
             // label3
             // 
@@ -94,12 +94,12 @@ namespace DBPROJECT
             this.label3.TabIndex = 5;
             this.label3.Text = "SMTP Host";
             // 
-            // textBox3
+            // txtSMTPHOST
             // 
-            this.textBox3.Location = new System.Drawing.Point(90, 381);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(211, 20);
-            this.textBox3.TabIndex = 4;
+            this.txtSMTPHOST.Location = new System.Drawing.Point(90, 381);
+            this.txtSMTPHOST.Name = "txtSMTPHOST";
+            this.txtSMTPHOST.Size = new System.Drawing.Size(211, 20);
+            this.txtSMTPHOST.TabIndex = 4;
             // 
             // label4
             // 
@@ -110,12 +110,12 @@ namespace DBPROJECT
             this.label4.TabIndex = 7;
             this.label4.Text = "SMTP Port";
             // 
-            // textBox4
+            // txtSMTPport
             // 
-            this.textBox4.Location = new System.Drawing.Point(90, 407);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(211, 20);
-            this.textBox4.TabIndex = 6;
+            this.txtSMTPport.Location = new System.Drawing.Point(90, 407);
+            this.txtSMTPport.Name = "txtSMTPport";
+            this.txtSMTPport.Size = new System.Drawing.Size(211, 20);
+            this.txtSMTPport.TabIndex = 6;
             // 
             // label5
             // 
@@ -135,25 +135,25 @@ namespace DBPROJECT
             this.label6.TabIndex = 10;
             this.label6.Text = "Gender";
             // 
-            // dateTimePicker1
+            // pkrBirthdate
             // 
-            this.dateTimePicker1.CustomFormat = "MM/dd/yyyy";
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker1.Location = new System.Drawing.Point(90, 433);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(100, 20);
-            this.dateTimePicker1.TabIndex = 11;
+            this.pkrBirthdate.CustomFormat = "MM/dd/yyyy";
+            this.pkrBirthdate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.pkrBirthdate.Location = new System.Drawing.Point(90, 433);
+            this.pkrBirthdate.Name = "pkrBirthdate";
+            this.pkrBirthdate.Size = new System.Drawing.Size(100, 20);
+            this.pkrBirthdate.TabIndex = 11;
             // 
-            // comboBox1
+            // cbxGender
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cbxGender.FormattingEnabled = true;
+            this.cbxGender.Items.AddRange(new object[] {
             "MALE",
             "FEMALE"});
-            this.comboBox1.Location = new System.Drawing.Point(90, 459);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 12;
+            this.cbxGender.Location = new System.Drawing.Point(90, 459);
+            this.cbxGender.Name = "cbxGender";
+            this.cbxGender.Size = new System.Drawing.Size(121, 21);
+            this.cbxGender.TabIndex = 12;
             // 
             // button4
             // 
@@ -179,38 +179,40 @@ namespace DBPROJECT
             this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button3.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btnClear
             // 
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(181, 290);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(90, 23);
-            this.button2.TabIndex = 14;
-            this.button2.Text = "Clear Photo";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnClear.Image = ((System.Drawing.Image)(resources.GetObject("btnClear.Image")));
+            this.btnClear.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnClear.Location = new System.Drawing.Point(181, 290);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(90, 23);
+            this.btnClear.TabIndex = 14;
+            this.btnClear.Text = "Clear Photo";
+            this.btnClear.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
-            // pictureBox1
+            // picBoxUser
             // 
-            this.pictureBox1.Image = global::DBPROJECT.Properties.Resources.group_png_3236;
-            this.pictureBox1.Location = new System.Drawing.Point(39, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(262, 261);
-            this.pictureBox1.TabIndex = 17;
-            this.pictureBox1.TabStop = false;
+            this.picBoxUser.Image = global::DBPROJECT.Properties.Resources.group_png_3236;
+            this.picBoxUser.Location = new System.Drawing.Point(39, 12);
+            this.picBoxUser.Name = "picBoxUser";
+            this.picBoxUser.Size = new System.Drawing.Size(262, 261);
+            this.picBoxUser.TabIndex = 17;
+            this.picBoxUser.TabStop = false;
             // 
-            // button1
+            // btnLoadPhoto
             // 
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(63, 290);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(106, 23);
-            this.button1.TabIndex = 18;
-            this.button1.Text = "Load New Photo";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnLoadPhoto.Image = ((System.Drawing.Image)(resources.GetObject("btnLoadPhoto.Image")));
+            this.btnLoadPhoto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLoadPhoto.Location = new System.Drawing.Point(63, 290);
+            this.btnLoadPhoto.Name = "btnLoadPhoto";
+            this.btnLoadPhoto.Size = new System.Drawing.Size(106, 23);
+            this.btnLoadPhoto.TabIndex = 18;
+            this.btnLoadPhoto.Text = "Load New Photo";
+            this.btnLoadPhoto.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnLoadPhoto.UseVisualStyleBackColor = true;
+            this.btnLoadPhoto.Click += new System.EventHandler(this.btnLoadPhoto_Click);
             // 
             // button5
             // 
@@ -230,27 +232,28 @@ namespace DBPROJECT
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(339, 569);
             this.Controls.Add(this.button5);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.btnLoadPhoto);
+            this.Controls.Add(this.picBoxUser);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.btnClear);
+            this.Controls.Add(this.cbxGender);
+            this.Controls.Add(this.pkrBirthdate);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.txtSMTPport);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.txtSMTPHOST);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtLoginName);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmUserProfile";
             this.Text = "User Profile";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.Load += new System.EventHandler(this.frmUserProfile_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.picBoxUser)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -258,23 +261,23 @@ namespace DBPROJECT
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtLoginName;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtSMTPHOST;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtSMTPport;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.DateTimePicker pkrBirthdate;
+        private System.Windows.Forms.ComboBox cbxGender;
+        private System.Windows.Forms.PictureBox picBoxUser;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnClear;
+        private System.Windows.Forms.Button btnLoadPhoto;
         private System.Windows.Forms.Button button5;
     }
 }
