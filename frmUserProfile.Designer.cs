@@ -42,12 +42,12 @@ namespace DBPROJECT
             this.label6 = new System.Windows.Forms.Label();
             this.pkrBirthdate = new System.Windows.Forms.DateTimePicker();
             this.cbxGender = new System.Windows.Forms.ComboBox();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnRefresh = new System.Windows.Forms.Button();
+            this.btnSave = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
             this.picBoxUser = new System.Windows.Forms.PictureBox();
             this.btnLoadPhoto = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.ChangePass = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxUser)).BeginInit();
             this.SuspendLayout();
             // 
@@ -55,6 +55,7 @@ namespace DBPROJECT
             // 
             this.txtLoginName.Location = new System.Drawing.Point(90, 329);
             this.txtLoginName.Name = "txtLoginName";
+            this.txtLoginName.ReadOnly = true;
             this.txtLoginName.Size = new System.Drawing.Size(211, 20);
             this.txtLoginName.TabIndex = 0;
             this.txtLoginName.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
@@ -84,6 +85,7 @@ namespace DBPROJECT
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(211, 20);
             this.txtEmail.TabIndex = 2;
+            this.txtEmail.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.EnableSaveButton);
             // 
             // label3
             // 
@@ -100,6 +102,7 @@ namespace DBPROJECT
             this.txtSMTPHOST.Name = "txtSMTPHOST";
             this.txtSMTPHOST.Size = new System.Drawing.Size(211, 20);
             this.txtSMTPHOST.TabIndex = 4;
+            this.txtSMTPHOST.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.EnableSaveButton);
             // 
             // label4
             // 
@@ -116,6 +119,7 @@ namespace DBPROJECT
             this.txtSMTPport.Name = "txtSMTPport";
             this.txtSMTPport.Size = new System.Drawing.Size(211, 20);
             this.txtSMTPport.TabIndex = 6;
+            this.txtSMTPport.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.EnableSaveButton);
             // 
             // label5
             // 
@@ -154,30 +158,33 @@ namespace DBPROJECT
             this.cbxGender.Name = "cbxGender";
             this.cbxGender.Size = new System.Drawing.Size(121, 21);
             this.cbxGender.TabIndex = 12;
+            this.cbxGender.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.EnableSaveButton);
             // 
-            // button4
+            // btnRefresh
             // 
-            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
-            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(238, 518);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(72, 23);
-            this.button4.TabIndex = 16;
-            this.button4.Text = "Refresh";
-            this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnRefresh.Image = ((System.Drawing.Image)(resources.GetObject("btnRefresh.Image")));
+            this.btnRefresh.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRefresh.Location = new System.Drawing.Point(238, 518);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(72, 23);
+            this.btnRefresh.TabIndex = 16;
+            this.btnRefresh.Text = "Refresh";
+            this.btnRefresh.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnRefresh.UseVisualStyleBackColor = true;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
-            // button3
+            // btnSave
             // 
-            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(175, 518);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(56, 23);
-            this.button3.TabIndex = 15;
-            this.button3.Text = "Save";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
+            this.btnSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSave.Location = new System.Drawing.Point(175, 518);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(56, 23);
+            this.btnSave.TabIndex = 15;
+            this.btnSave.Text = "Save";
+            this.btnSave.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnClear
             // 
@@ -214,28 +221,29 @@ namespace DBPROJECT
             this.btnLoadPhoto.UseVisualStyleBackColor = true;
             this.btnLoadPhoto.Click += new System.EventHandler(this.btnLoadPhoto_Click);
             // 
-            // button5
+            // ChangePass
             // 
-            this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
-            this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.Location = new System.Drawing.Point(24, 518);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(145, 23);
-            this.button5.TabIndex = 19;
-            this.button5.Text = "Change User Password";
-            this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button5.UseVisualStyleBackColor = true;
+            this.ChangePass.Image = ((System.Drawing.Image)(resources.GetObject("ChangePass.Image")));
+            this.ChangePass.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ChangePass.Location = new System.Drawing.Point(24, 518);
+            this.ChangePass.Name = "ChangePass";
+            this.ChangePass.Size = new System.Drawing.Size(145, 23);
+            this.ChangePass.TabIndex = 19;
+            this.ChangePass.Text = "Change User Password";
+            this.ChangePass.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.ChangePass.UseVisualStyleBackColor = true;
+            this.ChangePass.Click += new System.EventHandler(this.ChangePass_Click);
             // 
             // frmUserProfile
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(339, 569);
-            this.Controls.Add(this.button5);
+            this.Controls.Add(this.ChangePass);
             this.Controls.Add(this.btnLoadPhoto);
             this.Controls.Add(this.picBoxUser);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.btnRefresh);
+            this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.cbxGender);
             this.Controls.Add(this.pkrBirthdate);
@@ -252,6 +260,7 @@ namespace DBPROJECT
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmUserProfile";
             this.Text = "User Profile";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmUserProfile_FormClosing);
             this.Load += new System.EventHandler(this.frmUserProfile_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picBoxUser)).EndInit();
             this.ResumeLayout(false);
@@ -274,10 +283,10 @@ namespace DBPROJECT
         private System.Windows.Forms.DateTimePicker pkrBirthdate;
         private System.Windows.Forms.ComboBox cbxGender;
         private System.Windows.Forms.PictureBox picBoxUser;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnRefresh;
+        private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.Button btnLoadPhoto;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button ChangePass;
     }
 }
