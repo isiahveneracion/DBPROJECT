@@ -146,7 +146,7 @@ namespace DBPROJECT
             // 
             this.changePasswordToolStripMenuItem.Image = global::DBPROJECT.Properties.Resources.forgot_password_icon_18359___10x10;
             this.changePasswordToolStripMenuItem.Name = "changePasswordToolStripMenuItem";
-            this.changePasswordToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.changePasswordToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
             this.changePasswordToolStripMenuItem.Text = "change password";
             this.changePasswordToolStripMenuItem.Click += new System.EventHandler(this.changePasswordToolStripMenuItem_Click);
             // 
@@ -154,7 +154,7 @@ namespace DBPROJECT
             // 
             this.editUserProfileToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("editUserProfileToolStripMenuItem.Image")));
             this.editUserProfileToolStripMenuItem.Name = "editUserProfileToolStripMenuItem";
-            this.editUserProfileToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.editUserProfileToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
             this.editUserProfileToolStripMenuItem.Text = "edit user profile";
             this.editUserProfileToolStripMenuItem.Click += new System.EventHandler(this.editUserProfileToolStripMenuItem_Click);
             // 
@@ -168,6 +168,7 @@ namespace DBPROJECT
             this.Controls.Add(this.tsTop);
             this.Controls.Add(this.menuMain);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuMain;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
