@@ -86,30 +86,45 @@ namespace DBPROJECT
 
             UserProfilefrm.Dispose();
         }
+
+        frmUser Userfrm;
+
+        private void usersToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Userfrm = new frmUser();
+            Userfrm.FormClosed += Userfrm_FormClosed;
+            Userfrm.MdiParent = this;
+            Userfrm.Show();
+        }
+
+        private void Userfrm_FormClosed(object sender, EventArgs e)
+        {
+            Userfrm.Dispose();
+        }
         /*
-        private void UserProfilefrm_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            UserProfilefrm = null;
-            
-            this.txtUserName.Text = Globals.gLoginName;
-        }
+private void UserProfilefrm_FormClosed(object sender, FormClosedEventArgs e)
+{
+   UserProfilefrm = null;
 
-        private void editUserProfileToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            if (UserProfilefrm == null)
-            {
-                UserProfilefrm = new frmUserProfile();
-                //UserProfilefrm.MdiParent = this;
+   this.txtUserName.Text = Globals.gLoginName;
+}
 
-                UserProfilefrm.FormClosed += UserProfilefrm_FormClosed;
+private void editUserProfileToolStripMenuItem_Click(object sender, EventArgs e)
+{
+   if (UserProfilefrm == null)
+   {
+       UserProfilefrm = new frmUserProfile();
+       //UserProfilefrm.MdiParent = this;
 
-                UserProfilefrm.Show();
-            }
-            else UserProfilefrm.Activate();
+       UserProfilefrm.FormClosed += UserProfilefrm_FormClosed;
 
-            this.txtUserName.Text = Globals.gLoginName;
+       UserProfilefrm.Show();
+   }
+   else UserProfilefrm.Activate();
 
-        }
-        */
+   this.txtUserName.Text = Globals.gLoginName;
+
+}
+*/
     }
 }
