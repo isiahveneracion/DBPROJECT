@@ -14,12 +14,15 @@ namespace DBPROJECT
     public partial class frmUser : Form
     {
         DataTable DTable;
-        //DataSet DTable;
+
         SqlDataAdapter DAdapter;
         SqlCommand DCommand;
         BindingSource DBindingSource;
+
         Boolean CancelUpdates;
+
         int idcolumn = 0;
+
         public frmUser()
         {
             InitializeComponent();
@@ -27,8 +30,10 @@ namespace DBPROJECT
 
         private void frmUser_Load(object sender, EventArgs e)
         {
+            this.CancelUpdates = true;
             this.BindMainGrid();
             this.FormatGrid();
+            this.CancelUpdates = false;
         }
 
         private void BindMainGrid()
@@ -49,6 +54,7 @@ namespace DBPROJECT
                 dgvMain.DataSource = DBindingSource;
                 this.bNavMain.BindingSource = this.DBindingSource;
             }
+            this.CancelUpdates = false;
         }
         private void FormatGrid()
         {
@@ -137,7 +143,7 @@ namespace DBPROJECT
         private void dgvMain_CellValueChanged(object sender, DataGridViewCellEventArgs e)
         {
             long userid = 0;
-
+            long newuserid;
             if (this.CancelUpdates == false && this.dgvMain.CurrentRow != null)
 
             {
@@ -175,15 +181,27 @@ namespace DBPROJECT
                     String ugender = row.Cells["gender"].Value == DBNull.Value ? ""
 
                         : row.Cells["gender"].Value.ToString();
+                    
+                    DateTime dt3;
 
-                    // DateTime dt1 = row.Cells["birthdate"].Value == DBNull.Value ? ""
+                    if (userid == 0)
 
-                    // : row.Cells["birthdate"].Value;
+                    {
+
+                        dt3 = DateTime.Now;
+
+                    }
+
+                    else
+
+                        dt3 = DateTime.Parse(row.Cells["birthdate"].Value.ToString());
 
 
-                    // String ubirthdate = row.Cells["birthdate"].Value == DBNull.Value ? ""
 
-                    //  : row.Cells["birthdate"].Value.ToString();
+                    String dt4 = Globals.glToMySqlDate(dt3);
+
+                    //DateTime dt3 = DateTime.Parse(row.Cells["birthdate"].Value.ToString());
+                    // String dt4 = Globals.glToMySqlDate(dt3);
 
                     if (row.Cells["loginname"].Value == DBNull.Value)
 
@@ -233,7 +251,7 @@ namespace DBPROJECT
 
                             cmd.Parameters.AddWithValue("@ugender", ugender);
 
-                            //  cmd.Parameters.AddWithValue("@ubirthdate", ubirthdate);
+                            cmd.Parameters.AddWithValue("@ubirthdate", dt4);
 
 
                             SqlDataAdapter dAdapt = new SqlDataAdapter(cmd);
@@ -242,8 +260,10 @@ namespace DBPROJECT
 
                             dAdapt.Fill(dt);
 
+                            newuserid = long.Parse(dt.Rows[0][0].ToString());
 
-
+                            if (userid == 0)
+                                row.Cells["id"].Value = newuserid;
                         }
 
                         catch (Exception ex)
@@ -269,9 +289,6 @@ namespace DBPROJECT
                 Globals.glCloseSqlConn();
 
             }
-
-
-
 
 
 
