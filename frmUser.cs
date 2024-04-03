@@ -67,6 +67,7 @@ namespace DBPROJECT
             this.dgvMain.Columns["smtpport"].HeaderText = "SMTP Port";
             this.dgvMain.Columns["gender"].HeaderText = "Gender";
             this.dgvMain.Columns["birthdate"].HeaderText = "BirthDay";
+            this.dgvMain.Columns["birthdate"].Visible = false;
 
             this.BackColor = Globals.gDialogBackgroundColor;
 
@@ -251,7 +252,7 @@ namespace DBPROJECT
 
                             cmd.Parameters.AddWithValue("@ugender", ugender);
 
-                            cmd.Parameters.AddWithValue("@ubirthdate", dt4);
+                            //cmd.Parameters.AddWithValue("@ubirthdate", dt4);
 
 
                             SqlDataAdapter dAdapt = new SqlDataAdapter(cmd);
@@ -292,6 +293,108 @@ namespace DBPROJECT
 
 
 
+        }
+
+        private Boolean SearchName(String searchVal)
+        {
+            bool resultVal = false;
+            int rowIndex = -1;
+
+            searchVal = searchVal.Trim().ToUpper();
+            if (searchVal != "")
+            {
+                this.bNavMain.MoveFirstItem.PerformClick();
+
+                foreach (DataGridViewRow row in dgvMain.Rows)
+                {
+                    try
+                    {
+                        if (row.Cells["loginname"].Value.ToString().StartsWith(searchVal))
+                        {
+                            rowIndex = row.Index;
+                            dgvMain.Rows[row.Index].Selected = true;
+                            resultVal = true;
+                            break;
+                        }
+                        this.bNavMain.MoveNextItem.PerformClick();
+                    }
+                    catch
+                    {
+                        break;
+                    }
+                } // foreach
+                if (!resultVal)
+                    csMessageBox.Show("Record not found.", "Search Result",
+                      MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+            } // if
+            return resultVal;
+
+        }
+
+        private void txtSearch_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                e.SuppressKeyPress = true;
+                e.Handled = true;
+                this.btnSearch.PerformClick(); //.Select();
+
+            }
+            else if (e.KeyCode == Keys.Escape)
+            {
+                // CustomMessageBox.ShowMessage("Escape key is pressed", "Result",
+                //     MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.txtSearch.Clear();
+                this.dgvMain.Focus();
+            }
+        }
+
+        private void btnSearch_Click_1(object sender, EventArgs e)
+        {
+            String searchVal = txtSearch.Text.Trim().ToUpper();
+
+            if (this.SearchName(searchVal))
+            {
+                this.txtSearch.Clear();
+                this.dgvMain.Focus();
+
+            }
+            else
+            {
+                this.txtSearch.Focus();
+            }
+
+        }
+
+        private frmEditUser EditUserfrm;
+        private void dgvMain_DoubleClick(object sender, EventArgs e)
+        {
+            long userid;
+
+            DataGridViewRow row = dgvMain.CurrentRow;
+
+
+            if (row.Cells[this.idcolumn].Value == DBNull.Value)
+
+                userid = 0;
+
+            else
+
+                userid = Convert.ToInt64(row.Cells[this.idcolumn].Value);
+
+
+            if (userid != 0)
+
+            {
+
+                EditUserfrm = new frmEditUser(userid);
+
+                EditUserfrm.MdiParent = this.MdiParent;
+
+                EditUserfrm.Show();
+
+            }
         }
     }
 }
