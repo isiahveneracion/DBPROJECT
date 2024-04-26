@@ -1,7 +1,7 @@
 ﻿
 namespace DBPROJECT
 {
-    partial class frmCustomers
+    partial class formSuppliers
     {
         /// <summary>
         /// Required designer variable.
@@ -31,13 +31,13 @@ namespace DBPROJECT
         {
             this.SuspendLayout();
             // 
-            // frmCustomers
+            // frmSuppliers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Name = "frmCustomers";
-            this.Text = "Customers";
+            this.Name = "frmSuppliers";
+            this.Text = "Suppliers";
             this.ResumeLayout(false);
 
         }

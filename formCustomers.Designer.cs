@@ -1,7 +1,7 @@
 ﻿
 namespace DBPROJECT
 {
-    partial class frmUser
+    partial class formCustomers
     {
         /// <summary>
         /// Required designer variable.
@@ -30,44 +30,41 @@ namespace DBPROJECT
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmUser));
-            this.dgvMain = new System.Windows.Forms.DataGridView();
-            this.bNavMain = new System.Windows.Forms.BindingNavigator(this.components);
-            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formCustomers));
+            this.dgvCust = new System.Windows.Forms.DataGridView();
+            this.bNavCust = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
+            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.txtSearch = new System.Windows.Forms.ToolStripTextBox();
-            this.btnSearch = new System.Windows.Forms.ToolStripButton();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvMain)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bNavMain)).BeginInit();
-            this.bNavMain.SuspendLayout();
+            this.txtCustSearch = new System.Windows.Forms.ToolStripTextBox();
+            this.btnCustSearch = new System.Windows.Forms.ToolStripButton();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCust)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bNavCust)).BeginInit();
+            this.bNavCust.SuspendLayout();
             this.SuspendLayout();
             // 
-            // dgvMain
+            // dgvCust
             // 
-            this.dgvMain.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvMain.Location = new System.Drawing.Point(103, 34);
-            this.dgvMain.Name = "dgvMain";
-            this.dgvMain.Size = new System.Drawing.Size(555, 360);
-            this.dgvMain.TabIndex = 0;
-            this.dgvMain.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMain_CellValueChanged);
-            this.dgvMain.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.dgvMain_RowPostPaint);
-            this.dgvMain.RowPrePaint += new System.Windows.Forms.DataGridViewRowPrePaintEventHandler(this.dgvMain_RowPrePaint);
-            this.dgvMain.UserDeletingRow += new System.Windows.Forms.DataGridViewRowCancelEventHandler(this.dgvMain_UserDeletingRow);
-            this.dgvMain.DoubleClick += new System.EventHandler(this.dgvMain_DoubleClick);
+            this.dgvCust.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCust.Location = new System.Drawing.Point(94, 41);
+            this.dgvCust.Name = "dgvCust";
+            this.dgvCust.Size = new System.Drawing.Size(638, 383);
+            this.dgvCust.TabIndex = 0;
+            this.dgvCust.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCust_CellValueChanged);
+            this.dgvCust.DoubleClick += new System.EventHandler(this.dgvCust_DoubleClick);
             // 
-            // bNavMain
+            // bNavCust
             // 
-            this.bNavMain.AddNewItem = null;
-            this.bNavMain.CountItem = this.bindingNavigatorCountItem;
-            this.bNavMain.DeleteItem = null;
-            this.bNavMain.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.bNavCust.AddNewItem = null;
+            this.bNavCust.CountItem = this.bindingNavigatorCountItem;
+            this.bNavCust.DeleteItem = null;
+            this.bNavCust.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.bindingNavigatorMoveFirstItem,
             this.bindingNavigatorMovePreviousItem,
             this.bindingNavigatorSeparator,
@@ -77,25 +74,18 @@ namespace DBPROJECT
             this.bindingNavigatorMoveNextItem,
             this.bindingNavigatorMoveLastItem,
             this.bindingNavigatorSeparator2,
-            this.txtSearch,
-            this.btnSearch});
-            this.bNavMain.Location = new System.Drawing.Point(0, 0);
-            this.bNavMain.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
-            this.bNavMain.MoveLastItem = this.bindingNavigatorMoveLastItem;
-            this.bNavMain.MoveNextItem = this.bindingNavigatorMoveNextItem;
-            this.bNavMain.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
-            this.bNavMain.Name = "bNavMain";
-            this.bNavMain.PositionItem = this.bindingNavigatorPositionItem;
-            this.bNavMain.Size = new System.Drawing.Size(800, 25);
-            this.bNavMain.TabIndex = 1;
-            this.bNavMain.Text = "bindingNavigator1";
-            // 
-            // bindingNavigatorCountItem
-            // 
-            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(35, 22);
-            this.bindingNavigatorCountItem.Text = "of {0}";
-            this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
+            this.txtCustSearch,
+            this.btnCustSearch});
+            this.bNavCust.Location = new System.Drawing.Point(0, 0);
+            this.bNavCust.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
+            this.bNavCust.MoveLastItem = this.bindingNavigatorMoveLastItem;
+            this.bNavCust.MoveNextItem = this.bindingNavigatorMoveNextItem;
+            this.bNavCust.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
+            this.bNavCust.Name = "bNavCust";
+            this.bNavCust.PositionItem = this.bindingNavigatorPositionItem;
+            this.bNavCust.Size = new System.Drawing.Size(800, 25);
+            this.bNavCust.TabIndex = 1;
+            this.bNavCust.Text = "bindingNavigator1";
             // 
             // bindingNavigatorMoveFirstItem
             // 
@@ -124,14 +114,22 @@ namespace DBPROJECT
             // 
             this.bindingNavigatorPositionItem.AccessibleName = "Position";
             this.bindingNavigatorPositionItem.AutoSize = false;
+            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
             this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 23);
             this.bindingNavigatorPositionItem.Text = "0";
             this.bindingNavigatorPositionItem.ToolTipText = "Current position";
             // 
+            // bindingNavigatorCountItem
+            // 
+            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(35, 22);
+            this.bindingNavigatorCountItem.Text = "of {0}";
+            this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
+            // 
             // bindingNavigatorSeparator1
             // 
-            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
+            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator";
             this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 25);
             // 
             // bindingNavigatorMoveNextItem
@@ -154,39 +152,39 @@ namespace DBPROJECT
             // 
             // bindingNavigatorSeparator2
             // 
-            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
+            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator";
             this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
             // 
-            // txtSearch
+            // txtCustSearch
             // 
-            this.txtSearch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(150, 25);
+            this.txtCustSearch.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtCustSearch.Name = "txtCustSearch";
+            this.txtCustSearch.Size = new System.Drawing.Size(100, 25);
             // 
-            // btnSearch
+            // btnCustSearch
             // 
-            this.btnSearch.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.btnSearch.Image = ((System.Drawing.Image)(resources.GetObject("btnSearch.Image")));
-            this.btnSearch.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(23, 22);
-            this.btnSearch.Text = "toolStripButton1";
-            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click_1);
+            this.btnCustSearch.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnCustSearch.Image = ((System.Drawing.Image)(resources.GetObject("btnCustSearch.Image")));
+            this.btnCustSearch.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnCustSearch.Name = "btnCustSearch";
+            this.btnCustSearch.Size = new System.Drawing.Size(23, 22);
+            this.btnCustSearch.Text = "toolStripButton1";
+            this.btnCustSearch.Click += new System.EventHandler(this.btnCustSearch_Click);
             // 
-            // frmUser
+            // formCustomers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.bNavMain);
-            this.Controls.Add(this.dgvMain);
-            this.Name = "frmUser";
-            this.Text = "frmUser";
-            this.Load += new System.EventHandler(this.frmUser_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvMain)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bNavMain)).EndInit();
-            this.bNavMain.ResumeLayout(false);
-            this.bNavMain.PerformLayout();
+            this.Controls.Add(this.bNavCust);
+            this.Controls.Add(this.dgvCust);
+            this.Name = "formCustomers";
+            this.Text = "Customers";
+            this.Load += new System.EventHandler(this.formCustomers_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCust)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bNavCust)).EndInit();
+            this.bNavCust.ResumeLayout(false);
+            this.bNavCust.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -194,8 +192,8 @@ namespace DBPROJECT
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dgvMain;
-        private System.Windows.Forms.BindingNavigator bNavMain;
+        private System.Windows.Forms.DataGridView dgvCust;
+        private System.Windows.Forms.BindingNavigator bNavCust;
         private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveFirstItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMovePreviousItem;
@@ -205,7 +203,7 @@ namespace DBPROJECT
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveNextItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
-        private System.Windows.Forms.ToolStripTextBox txtSearch;
-        private System.Windows.Forms.ToolStripButton btnSearch;
+        private System.Windows.Forms.ToolStripTextBox txtCustSearch;
+        private System.Windows.Forms.ToolStripButton btnCustSearch;
     }
 }

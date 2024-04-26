@@ -101,28 +101,40 @@ namespace DBPROJECT
         {
             Userfrm.Dispose();
         }
+
+        private void btnCustomers_Click(object sender, EventArgs e)
+        {
+            formCustomers f1 = new formCustomers();
+            f1.ShowDialog(); 
+        }
+
+        private void btnSuppliers_Click(object sender, EventArgs e)
+        {
+            formSuppliers f2 = new formSuppliers();
+            f2.ShowDialog();
+        }
         /*
 private void UserProfilefrm_FormClosed(object sender, FormClosedEventArgs e)
 {
-   UserProfilefrm = null;
+UserProfilefrm = null;
 
-   this.txtUserName.Text = Globals.gLoginName;
+this.txtUserName.Text = Globals.gLoginName;
 }
 
 private void editUserProfileToolStripMenuItem_Click(object sender, EventArgs e)
 {
-   if (UserProfilefrm == null)
-   {
-       UserProfilefrm = new frmUserProfile();
-       //UserProfilefrm.MdiParent = this;
+if (UserProfilefrm == null)
+{
+UserProfilefrm = new frmUserProfile();
+//UserProfilefrm.MdiParent = this;
 
-       UserProfilefrm.FormClosed += UserProfilefrm_FormClosed;
+UserProfilefrm.FormClosed += UserProfilefrm_FormClosed;
 
-       UserProfilefrm.Show();
-   }
-   else UserProfilefrm.Activate();
+UserProfilefrm.Show();
+}
+else UserProfilefrm.Activate();
 
-   this.txtUserName.Text = Globals.gLoginName;
+this.txtUserName.Text = Globals.gLoginName;
 
 }
 */
