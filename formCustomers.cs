@@ -224,7 +224,7 @@ namespace DBPROJECT
                 if (Globals.glOpenSqlConn())
                 {
 
-                    SqlCommand cmd = new SqlCommand("dbo.spusersDelete", Globals.sqlconn);
+                    SqlCommand cmd = new SqlCommand("dbo.spCustomersDelete", Globals.sqlconn);
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.AddWithValue("@cid", Convert.ToInt64(row.Cells[idcolumn].Value));
                     cmd.ExecuteNonQuery();
