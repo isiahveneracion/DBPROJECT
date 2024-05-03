@@ -50,17 +50,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="formItems.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formItems.Designer.cs">
+      <DependentUpon>formItems.cs</DependentUpon>
+    </Compile>
     <Compile Include="formCustomers.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="formCustomers.Designer.cs">
       <DependentUpon>formCustomers.cs</DependentUpon>
-    </Compile>
-    <Compile Include="formSuppliers.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="formSuppliers.Designer.cs">
-      <DependentUpon>formSuppliers.cs</DependentUpon>
     </Compile>
     <Compile Include="frmAskDate.cs">
       <SubType>Form</SubType>
@@ -169,11 +169,11 @@
     <Compile Include="Globals.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="formItems.resx">
+      <DependentUpon>formItems.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="formCustomers.resx">
       <DependentUpon>formCustomers.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="formSuppliers.resx">
-      <DependentUpon>formSuppliers.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmAskDate.resx">
       <DependentUpon>frmAskDate.cs</DependentUpon>

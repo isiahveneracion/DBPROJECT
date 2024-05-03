@@ -204,10 +204,39 @@ namespace DBPROJECT
         {
 
         }
-
+        private frmEditUser EditUserfrm;
         private void dgvCust_DoubleClick(object sender, EventArgs e)
         {
+            {
+                long userid;
 
+                DataGridViewRow row = dgvCust.CurrentRow;
+
+
+
+                if (row.Cells[this.idcolumn].Value == DBNull.Value)
+
+                    userid = 0;
+
+                else
+
+                    userid = Convert.ToInt64(row.Cells[this.idcolumn].Value);
+
+
+
+                if (userid != 0)
+
+                {
+
+                    EditUserfrm = new frmEditUser(userid);
+
+                    EditUserfrm.MdiParent = this.MdiParent;
+
+                    EditUserfrm.Show();
+
+                }
+
+            }
         }
 
         private void dgvCust_UserDeletingRow(object sender, DataGridViewRowCancelEventArgs e)
@@ -270,5 +299,7 @@ namespace DBPROJECT
 
             dgvCust.RowHeadersWidth = rowHeaderWitdh + 40;
         }
+        
+    
     }
 }

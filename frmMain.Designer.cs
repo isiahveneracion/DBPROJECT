@@ -142,7 +142,6 @@ namespace DBPROJECT
             // 
             // txtUserName
             // 
-            this.txtUserName.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtUserName.Name = "txtUserName";
             this.txtUserName.ReadOnly = true;
             this.txtUserName.Size = new System.Drawing.Size(100, 25);
@@ -155,7 +154,6 @@ namespace DBPROJECT
             // 
             // txtServer
             // 
-            this.txtServer.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtServer.Name = "txtServer";
             this.txtServer.ReadOnly = true;
             this.txtServer.Size = new System.Drawing.Size(100, 25);
